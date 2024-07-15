@@ -15,8 +15,7 @@ add_new_element_in_list = my_dict['list'].append('list_6')
 remove_second_element_from_list = my_dict['list'].pop(1)
 
 # dict
-
-add_new_element_in_dict = (my_dict['dict'])['i am a tuple'] = (10, 9, 8, 7, 6, 5)
+add_new_element_in_dict = my_dict['dict'][('i am a tuple',)] = 'tuple_value'
 remove_any_element_from_dict = my_dict['dict'].pop('dict_1')
 
 # set
