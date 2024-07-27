@@ -4,6 +4,7 @@ def fibonacci():
         yield fib1
         fib1, fib2 = fib2, fib1 + fib2
 
+
 def get_fibonacci_number(position):
     fib_gen = fibonacci()
     fib_number = 0
