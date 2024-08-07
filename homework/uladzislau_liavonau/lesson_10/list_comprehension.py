@@ -6,11 +6,9 @@ PRICE_LIST = '''тетрадь 50р
 пенал 300р
 рюкзак 500р'''
 
-price_dict = dict(
-    map(
-        lambda item: (item.rsplit(' ', 1)[0], int(item.rsplit(' ', 1)[1][:-1])),
-        PRICE_LIST.splitlines()
-    )
-)
+dict_price_list = {
+    i.rsplit(' ', 1)[0]: int(i.rsplit(' ', 1)[1][:-1])
+    for i in PRICE_LIST.splitlines()
+}
 
-print(price_dict)
+print(dict_price_list)
