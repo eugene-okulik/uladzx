@@ -11,7 +11,7 @@ class Flower:
         return (f"{self.name} (Цвет: {self.color}, "
                 f"Длина стебля: {self.length} см, "
                 f"Свежесть: {self.freshness} дней, "
-                f"Стоимость: {self.cost} $., "
+                f"Стоимость: {self.cost} $, "
                 f"Время жизни: {self.life_time} дней)")
 
 
