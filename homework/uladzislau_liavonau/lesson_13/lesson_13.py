@@ -6,12 +6,14 @@ base_path = '/Users/uladzislauliavonau/QA_Automation_course/uladzx/homework/euge
 file_path = os.path.join(base_path, 'data.txt')
 
 
+# Генератор для работы со строками в файле
 def read_file(input_path):
     with open(input_path, 'r') as data_file:
         for line in data_file.readlines():
             yield line
 
 
+# Форматирование строк файла согласно требований
 def modified_data_line(data_line):
     date_object = datetime.strptime(data_line[3:29], "%Y-%m-%d %H:%M:%S.%f")
 
