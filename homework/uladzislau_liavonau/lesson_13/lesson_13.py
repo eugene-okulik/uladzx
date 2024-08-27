@@ -2,8 +2,9 @@ import os
 from datetime import datetime, timedelta
 
 # Определяем базовый путь и путь к файлу
-base_path = '/Users/uladzislauliavonau/QA_Automation_course/uladzx/homework/eugene_okulik/hw_13/'
-file_path = os.path.join(base_path, 'data.txt')
+base_path = os.path.dirname(__file__)
+homework_path = os.path.dirname(os.path.dirname(base_path))
+file_path = os.path.join(homework_path, 'eugene_okulik', 'hw_13', 'data.txt')
 
 
 # Генератор для работы со строками в файле
