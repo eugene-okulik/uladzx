@@ -1,0 +1,64 @@
+# 1.Создайте студента (student):
+INSERT INTO students(name, second_name) VALUES ('Jane', 'Doe')
+
+# 2.Создайте несколько книг (books) и укажите, что ваш созданный студент взял их:
+INSERT INTO books (title, taken_by_student_id)
+VALUES
+('The Silmarillion', 2015),
+('Hobbit', 2015);
+
+# 3.Создайте группу (group) и определите своего студента туда:
+# Создание группы:
+INSERT INTO `groups` (title)
+VALUES
+('Student group №2808')
+
+# Определение студента в группу:
+UPDATE students SET group_id = 1844 where id = 2015
+
+# 4.Создайте несколько учебных предметов (subjects)
+INSERT INTO subjets (title)
+VALUES
+('Основы тестирования ПО'),
+('Питоноведение');
+
+# 5.Создайте по два занятия для каждого предмета (lessons):
+INSERT INTO lessons (title, subject_id)
+VALUES
+('Основы тестирования ПО: часть 1', 2592),
+('Основы тестирования ПО: часть 2', 2592),
+('Питоноведение: введение', 2593),
+('Питоноведение: продвинутый курс', 2593);
+
+# 6.Поставьте своему студенту оценки (marks) для всех созданных вами занятий:
+INSERT INTO marks (value, lesson_id, student_id)
+VALUES
+('HIGH', 5453, 2015),
+('HIGH', 5454, 2015),
+('ABOVE MEDIUM',5455, 2015),
+('MEDIUM', 5456, 2015);
+
+# Получение информации из базы данных
+# 1.Все оценки студента:
+SELECT * FROM marks
+WHERE student_id = 2015
+
+# 2.Все книги, которые находятся у студента:
+SELECT * FROM books
+WHERE taken_by_student_id = 2015
+
+# 3.Для вашего студента выведите всё, что о нем есть в базе:
+группа, книги, оценки с названиями занятий и предметов (всё одним запросом с использованием Join):
+SELECT * FROM students
+JOIN books
+ON students.id = books.taken_by_student_id
+JOIN `groups`
+ON students.group_id = groups.id
+JOIN marks
+ON students.id = marks.student_id
+JOIN lessons
+ON marks.lesson_id = lessons.id
+JOIN subjets
+ON lessons.subject_id = subjets.id
+WHERE
+students.id = 2015
