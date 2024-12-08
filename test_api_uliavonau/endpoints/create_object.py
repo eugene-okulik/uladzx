@@ -1,7 +1,7 @@
 import requests
 import allure
 
-from uladzx.test_api_uliavonau.endpoints.endpoint import Endpoint
+from endpoints.endpoint import Endpoint
 
 
 class CreateObject(Endpoint):
