@@ -8,7 +8,6 @@ TEST_DATA = [
 ]
 
 
-@pytest.mark.critical
 @pytest.mark.parametrize('data', TEST_DATA)
 def test_create_an_object(create_object_endpoint, delete_object_endpoint, data):
     create_object_endpoint.create_new_object(body=data)
