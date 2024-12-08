@@ -1,7 +1,7 @@
 import requests
 import allure
 
-from endpoints.endpoint import Endpoint
+from uladzx.test_api_uliavonau.endpoints.endpoint import Endpoint
 
 
 class UpdateObjectPatch(Endpoint):
