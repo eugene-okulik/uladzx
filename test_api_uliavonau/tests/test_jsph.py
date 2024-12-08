@@ -2,12 +2,30 @@ import pytest
 
 
 TEST_DATA = [
-        {"name": "Object 1",
-         "data": {"color": "red", "size": "small", "userId": 1}},
-        {"name": "Object 2",
-         "data": {"color": "blue", "size": "medium", "userId": 2}},
-        {"name": "Object 3",
-         "data": {"color": "green", "size": "large", "userId": 3}},
+    {
+        "name": "Object 1",
+        "data": {
+            "color": "red",
+            "size": "small",
+            "userId": 1,
+        },
+    },
+    {
+        "name": "Object 2",
+        "data": {
+            "color": "blue",
+            "size": "medium",
+            "userId": 2,
+        },
+    },
+    {
+        "name": "Object 3",
+        "data": {
+            "color": "green",
+            "size": "large",
+            "userId": 3,
+        },
+    },
 ]
 
 
