@@ -47,7 +47,6 @@ def test_update_object_using_put(
         create_and_delete_new_object,
         put_update_object_endpoint
 ):
-    print(f"New object id is {create_and_delete_new_object}")
 
     updated_data = {
         "name": "10.10.2024 object__UPD_using_PUT",
@@ -65,7 +64,6 @@ def test_update_object_using_patch(
         create_and_delete_new_object,
         patch_update_object_endpoint
 ):
-    print(f"New object id is {create_and_delete_new_object}")
 
     updated_data = {"name": "10.10.2024 object_UPD_using_PATCH"}
 
@@ -76,8 +74,9 @@ def test_update_object_using_patch(
      (updated_data['name']))
 
 
-def test_delete_created_object(create_and_delete_new_object, delete_object_endpoint):
+def test_delete_created_object(
+        create_and_delete_new_object,
+        delete_object_endpoint
+):
     delete_object_endpoint.delete_object(create_and_delete_new_object)
     delete_object_endpoint.check_response_status_is_200()
-    print(f"Object is deleted")
-

@@ -1,6 +1,5 @@
 import pytest
 import requests
-import allure
 
 from endpoints.create_object import CreateObject
 from endpoints.put_update_object import UpdateObjectPut
