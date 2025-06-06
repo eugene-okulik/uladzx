@@ -63,7 +63,7 @@ def test_add_selected_device_to_cart(driver):
 
     # Results assertion
     assert selected_device_text == device_in_the_cart_name, \
-        f"TEST FAILED: Values are not the same!"
+        "TEST FAILED: Values are not the same!"
 
 
 def test_add_to_compare_items(driver):
@@ -98,4 +98,4 @@ def test_add_to_compare_items(driver):
     product_name = product_name_element.text
 
     assert selected_product_name == product_name, \
-        f"TEST FAILED: Values are not the same!"
+        "TEST FAILED: Values are not the same!"
