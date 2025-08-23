@@ -1,0 +1,9 @@
+/dev/null: c
+/dev/zero: c
+/dev/sda: (stat: cannot stat '/dev/sda': No such file or directory)
+/dev/tty: c
+/root: d
+/etc/passwd: -
+/proc/mounts: l
+/bin/ls: -
+/bin/zcat: -
